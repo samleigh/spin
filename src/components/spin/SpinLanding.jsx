@@ -1,3 +1,4 @@
+import './AnimatedBackground.css';
 import React, { useState, useEffect } from 'react';
 
 export const SpinLanding = ({ onStart }) => {
