@@ -1,3 +1,4 @@
+import React from 'react'
 import SpinLanding from './components/spin/SpinLanding'
 import './App.css'
 
