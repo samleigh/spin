@@ -1,13 +1,19 @@
-import React from 'react'
-import { SpinLanding } from './components/spin/SpinLanding' // Added curly braces here
-import './App.css'
+import React, { useState } from 'react';
+import { SpinLanding } from './components/spin/SpinLanding';
+import { MainApp } from './components/spin/MainApp';
 
 function App() {
+  const [isStarted, setIsStarted] = useState(false);
+
   return (
-    <div className="App">
-      <SpinLanding />
-    </div>
-  )
+    <>
+      {!isStarted ? (
+        <SpinLanding onStart={() => setIsStarted(true)} />
+      ) : (
+        <MainApp onExit={() => setIsStarted(false)} />
+      )}
+    </>
+  );
 }
 
-export default App
+export default App;
